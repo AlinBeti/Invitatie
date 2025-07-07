@@ -1,8 +1,6 @@
-# Creăm o versiune îmbunătățită a HTML-ului cu:
-# - imagine de fundal integrată direct
-# - stil rafinat cu animații CSS și overlay elegant
+# Creăm o versiune actualizată cu YouTube embed invizibil pentru melodia Rareș – Cu tine de mână și atât
 
-improved_html = """
+html_with_youtube_audio = """
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -83,11 +81,12 @@ improved_html = """
       padding: 20px;
     }
 
-    audio {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 5;
+    iframe.audio-player {
+      width: 0;
+      height: 0;
+      border: none;
+      position: absolute;
+      left: -9999px;
     }
 
     @keyframes fadeIn {
@@ -138,17 +137,19 @@ improved_html = """
     Cu drag, Alina & Cătălin
   </footer>
 
-  <audio controls autoplay loop>
-    <source src="https://dl.dropboxusercontent.com/scl/fi/35mrpv7q1y3kvs0y2vc6g/Rares-Cu-tine-de-mana-si-atat.mp3?rlkey=3dpyx0i7k59m01ayub0eyne34&dl=0" type="audio/mpeg">
-    Melodia nu poate fi redată.
-  </audio>
+  <!-- YouTube Embed invizibil -->
+  <iframe class="audio-player"
+    src="https://www.youtube.com/embed/UjEq9C7h2wA?autoplay=1&loop=1&playlist=UjEq9C7h2wA"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
 </body>
 </html>
 """
 
-# Salvăm fișierul HTML actualizat
-improved_html_path = "/mnt/data/invitatie_nunta_alina_catalin_elegant.html"
-with open(improved_html_path, "w", encoding="utf-8") as f:
-    f.write(improved_html)
+# Salvăm noul fișier HTML
+html_youtube_path = "/mnt/data/invitatie_nunta_alina_catalin_youtube_audio.html"
+with open(html_youtube_path, "w", encoding="utf-8") as f:
+    f.write(html_with_youtube_audio)
 
-improved_html_path
+html_youtube_path
