@@ -78,12 +78,19 @@
       padding: 20px;
     }
 
-    iframe.audio-player {
-      width: 0;
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
       height: 0;
-      border: none;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .video-container iframe {
       position: absolute;
-      left: -9999px;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     @keyframes fadeIn {
@@ -130,15 +137,21 @@
     <p>Bulevardul Aviatorilor nr. 40, Sector 1, București</p>
   </div>
 
+  <div class="section">
+    <h3>Melodia noastră preferată</h3>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/PmeRiTUS_aU" 
+        title="Melodia noastră"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
   <footer>
     Cu drag, Alina & Cătălin
   </footer>
-
-  <!-- YouTube Embed invizibil -->
-  <iframe class="audio-player"
-    src="https://www.youtube.com/embed/PmeRiTUS_aU?autoplay=1&loop=1&playlist=PmeRiTUS_aU"
-    allow="autoplay"
-    allowfullscreen>
-  </iframe>
 </body>
 </html>
