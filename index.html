@@ -1,105 +1,143 @@
 
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Alina & Cătălin - Invitație de Nuntă</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
+  <meta charset="UTF-8">
+  <title>Alina & Cătălin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap');
 
-        html, body {{
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Open Sans', sans-serif;
-            background: url('background_cuplu.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-        }}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .overlay {{
-            background-color: rgba(0,0,0,0.5);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }}
+    body, html {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-        .content {{
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 5vh 10vw;
-        }}
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('background_cuplu.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-        h1 {{
-            font-family: 'Great Vibes', cursive;
-            font-size: 64px;
-            margin-bottom: 0;
-        }}
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
 
-        h2 {{
-            font-size: 28px;
-            margin-top: 0;
-            margin-bottom: 40px;
-        }}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      animation: fadeIn 2s ease;
+    }
 
-        .section {{
-            margin-bottom: 40px;
-        }}
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+    }
 
-        audio {{
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 3;
-        }}
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
 
-        @media (max-width: 768px) {{
-            h1 {{ font-size: 48px; }}
-            h2 {{ font-size: 22px; }}
-        }}
-    </style>
+    .section {
+      background: #fff;
+      color: #333;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .section h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      margin-bottom: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+    }
+
+    audio {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 48px; }
+      h2 { font-size: 20px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="hero">
     <div class="overlay"></div>
-    <div class="content">
-        <h1>Alina & Cătălin</h1>
-        <h2>16 August 2025 • București</h2>
-
-        <div class="section">
-            <p>Cu binecuvântarea părinților:</p>
-            <p>Daniel și Maria Beți</p>
-            <p>Gigică † și Mariana Munteanu</p>
-        </div>
-
-        <div class="section">
-            <p>împreună cu nașii noștri,</p>
-            <p><strong>Iuliana și George Stănilă</strong></p>
-        </div>
-
-        <div class="section">
-            <p>vă invităm cu drag la ceremonia religioasă</p>
-            <p><strong>ora 14:00</strong> – Catedrala Sfântul Iosif</p>
-            <p>Str. General Berthelot nr. 17, Sector 1, București</p>
-        </div>
-
-        <div class="section">
-            <p>urmată de o masă într-un cadru restrâns</p>
-            <p><strong>ora 15:30</strong> – Restaurant Zexe, Zahanaua Gastronomică</p>
-            <p>Bd. Aviatorilor nr. 40, Sector 1, București</p>
-        </div>
-
-        <div class="section">
-            <em>„Două inimi. O singură promisiune. Cu tine de mână și atât.”</em>
-        </div>
+    <div class="hero-content">
+      <h1>Alina & Cătălin</h1>
+      <h2>16 August 2025 • București</h2>
+      <p><em>„Două inimi. O singură promisiune. Cu tine de mână și atât.”</em></p>
     </div>
+  </div>
 
-    <audio controls autoplay loop>
-        <source src="https://dl.dropboxusercontent.com/scl/fi/35mrpv7q1y3kvs0y2vc6g/Rares-Cu-tine-de-mana-si-atat.mp3?rlkey=3dpyx0i7k59m01ayub0eyne34&dl=0" type="audio/mpeg">
-        Melodia nu poate fi redată.
-    </audio>
+  <div class="section">
+    <h3>Cu binecuvântarea părinților</h3>
+    <p>Daniel și Maria Beți</p>
+    <p>Gigică † și Mariana Munteanu</p>
+  </div>
+
+  <div class="section">
+    <h3>Împreună cu nașii noștri</h3>
+    <p>Iuliana și George Stănilă</p>
+  </div>
+
+  <div class="section">
+    <h3>Cununia religioasă</h3>
+    <p>ora 14:00 – Catedrala Sfântul Iosif</p>
+    <p>Str. General Berthelot nr. 17, Sector 1, București</p>
+  </div>
+
+  <div class="section">
+    <h3>Masă într-un cadru restrâns</h3>
+    <p>ora 15:30 – Restaurant Zexe, Zahanaua Gastronomică</p>
+    <p>Bulevardul Aviatorilor nr. 40, Sector 1, București</p>
+  </div>
+
+  <footer>
+    Cu drag, Alina & Cătălin
+  </footer>
+
+  <audio controls autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/35mrpv7q1y3kvs0y2vc6g/Rares-Cu-tine-de-mana-si-atat.mp3?rlkey=3dpyx0i7k59m01ayub0eyne34&dl=0" type="audio/mpeg">
+    Melodia nu poate fi redată.
+  </audio>
 </body>
 </html>
